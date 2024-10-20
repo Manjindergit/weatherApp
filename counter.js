@@ -12,6 +12,7 @@ console.log(weatherInfo);
 }
 
 async function getWeatherData(cityName) {
+  try{
   const responseData = await fetch(
     `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${cityName}?key=${
       import.meta.env.VITE_API_KEY
@@ -27,6 +28,11 @@ async function getWeatherData(cityName) {
     conditions: weatherData.currentConditions.conditions,
     desc: weatherData.description,
   };
+}
+catch(error){
+  console.log("error in fetching data", error);
+  throw error;
+}
 
  
 }
