@@ -6,7 +6,7 @@ document.querySelector('#app').innerHTML = `
    
     <h1>Get Weather</h1>
     <div class="card">
-      <input id="cityName"></input>
+      <input id="cityName" placeholder="Please Enter Name of City"></input>
       <button id="submitBtn">Fetch</button>
     </div>
     <p id="responseP">
